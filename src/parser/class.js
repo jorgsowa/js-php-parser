@@ -175,7 +175,7 @@ module.exports = {
    *  variable_list ::= (variable_declaration ',')* variable_declaration
    * ```
    */
-  read_variable_list: function (flags, attrs) {
+  read_variable_list(flags, attrs) {
     let property_statement = this.node("propertystatement");
 
     const properties = this.read_list(
@@ -247,7 +247,7 @@ module.exports = {
    *
    * @returns {PropertyHook[]}
    */
-  read_property_hooks: function () {
+  read_property_hooks() {
     if (this.version < 804) {
       this.raiseError("Parse Error: Typed Class Constants requires PHP 8.4+");
     }
@@ -267,7 +267,7 @@ module.exports = {
     return [];
   },
 
-  read_property_hook: function () {
+  read_property_hook() {
     const property_hooks = this.node("propertyhook");
 
     const is_final = this.token === this.tok.T_FINAL;

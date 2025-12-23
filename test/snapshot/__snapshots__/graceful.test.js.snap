@@ -373,12 +373,11 @@ Program {
               },
               "nullable": false,
               "readonly": false,
-              "type": Name {
-                "kind": "name",
-                "name": "A",
-                "resolution": "uqn",
+              "type": null,
+              "value": Number {
+                "kind": "number",
+                "value": "1",
               },
-              "value": null,
             },
           ],
           "visibility": "",
@@ -431,20 +430,8 @@ Program {
       "expected": 222,
       "kind": "error",
       "line": 1,
-      "message": "Parse Error : syntax error, unexpected '=', expecting T_VARIABLE on line 1",
-      "token": "'='",
-    },
-    Error {
-      "expected": [
-        ",",
-        ";",
-        "=",
-        "{",
-      ],
-      "kind": "error",
-      "line": 1,
-      "message": "Parse Error : syntax error, unexpected '1' (T_LNUMBER) on line 1",
-      "token": "'1' (T_LNUMBER)",
+      "message": "Parse Error : syntax error, unexpected 'A' (T_STRING), expecting T_VARIABLE on line 1",
+      "token": "'A' (T_STRING)",
     },
     Error {
       "expected": [
@@ -453,19 +440,8 @@ Program {
       ],
       "kind": "error",
       "line": 1,
-      "message": "Parse Error : syntax error, unexpected '1' (T_LNUMBER) on line 1",
-      "token": "'1' (T_LNUMBER)",
-    },
-    Error {
-      "expected": [
-        198,
-        222,
-        182,
-      ],
-      "kind": "error",
-      "line": 1,
-      "message": "Parse Error : syntax error, unexpected '1' (T_LNUMBER) on line 1",
-      "token": "'1' (T_LNUMBER)",
+      "message": "Parse Error : syntax error on line 1",
+      "token": "the end of file (EOF)",
     },
     Error {
       "expected": "}",
