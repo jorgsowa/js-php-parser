@@ -26,12 +26,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/glayzzle/php-parser"
+    "url": "https://github.com/jorgsowa/js-php-parser"
   },
   "bugs": {
     "url": "https://github.com/glayzzle/php-parser/issues"
   },
-  "homepage": "https://glayzzle.com/",
   "keywords": [
     "php",
     "php5",
