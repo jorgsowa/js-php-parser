@@ -781,7 +781,7 @@ Program {
 }
 `;
 
-exports[`Test variables class keyword on variables 1`] = `
+exports[`Test variables class keyword 1`] = `
 Program {
   "children": [
     ExpressionStatement {
@@ -823,6 +823,32 @@ Program {
             "curly": false,
             "kind": "variable",
             "name": "arrayVariable",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": StaticLookup {
+        "kind": "staticlookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "class",
+        },
+        "what": New {
+          "arguments": [],
+          "kind": "new",
+          "what": Class {
+            "attrGroups": [],
+            "body": [],
+            "extends": null,
+            "implements": null,
+            "isAbstract": false,
+            "isAnonymous": true,
+            "isFinal": false,
+            "isReadonly": false,
+            "kind": "class",
+            "name": null,
           },
         },
       },
