@@ -97,6 +97,9 @@ module.exports = {
     if (this.token === this.tok.T_SPACESHIP) {
       return result("bin", "<=>", expr, this.next().read_expr());
     }
+    if (this.token === this.tok.T_NULLSAFE_OBJECT_OPERATOR) {
+      return result("nullsafepropertylookup", expr, this.read_what());
+    }
 
     if (this.token === this.tok.T_INSTANCEOF) {
       expr = result(
