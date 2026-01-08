@@ -1119,6 +1119,31 @@ Program {
 }
 `;
 
+exports[`Test call nullsafepropertylookup (3) 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": NullSafePropertyLookup {
+        "kind": "nullsafepropertylookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "property",
+        },
+        "what": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "obj",
+          "parenthesizedExpression": true,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
 exports[`Test call nullsafepropertylookup 1`] = `
 Program {
   "children": [
