@@ -775,6 +775,7 @@ declare module "php-parser" {
     readonly: boolean;
     nullable: boolean;
     type: Identifier | Identifier[] | null;
+    hooks: PropertyHook[];
     attrGroups: AttrGroup[];
   }
   /**
@@ -1201,6 +1202,10 @@ declare module "php-parser" {
      */
     castKeywords: any;
   }
+  /**
+   * Reads property hooks
+   */
+  function read_property_hooks(): PropertyHook[];
   /**
    * The PHP Parser class that build the AST tree from the lexer
    * @property lexer - current lexer instance

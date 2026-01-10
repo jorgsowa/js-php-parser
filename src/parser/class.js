@@ -245,6 +245,7 @@ module.exports = {
   /**
    * Reads property hooks
    *
+   * @memberOf module:php-parser
    * @returns {PropertyHook[]}
    */
   read_property_hooks() {
