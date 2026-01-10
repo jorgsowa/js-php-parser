@@ -1,6 +1,6 @@
 {
   "name": "@jorgsowa/php-parser",
-  "version": "3.2.5-3",
+  "version": "3.2.5-4",
   "description": "Parse PHP code from JS and returns its AST",
   "main": "src/index.js",
   "browser": "dist/php-parser.js",
