@@ -1084,7 +1084,7 @@ Program {
 }
 `;
 
-exports[`Test call nullsafepropertylookup (2) 1`] = `
+exports[`Test call nullsafepropertylookup (1) 1`] = `
 Program {
   "children": [
     ExpressionStatement {
@@ -1097,18 +1097,35 @@ Program {
             "kind": "identifier",
             "name": "call",
           },
-          "what": NullSafePropertyLookup {
-            "kind": "nullsafepropertylookup",
-            "offset": Identifier {
-              "kind": "identifier",
-              "name": "property",
-            },
-            "what": Variable {
-              "curly": false,
-              "kind": "variable",
-              "name": "obj",
-            },
+          "what": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "obj",
           },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test call nullsafepropertylookup (2) 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": NullSafePropertyLookup {
+        "kind": "nullsafepropertylookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "prop",
+        },
+        "what": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "obj",
         },
       },
       "kind": "expressionstatement",
@@ -1144,7 +1161,7 @@ Program {
 }
 `;
 
-exports[`Test call nullsafepropertylookup 1`] = `
+exports[`Test call nullsafepropertylookup (4) 1`] = `
 Program {
   "children": [
     ExpressionStatement {
@@ -1157,10 +1174,98 @@ Program {
             "kind": "identifier",
             "name": "call",
           },
+          "what": NullSafePropertyLookup {
+            "kind": "nullsafepropertylookup",
+            "offset": Identifier {
+              "kind": "identifier",
+              "name": "property",
+            },
+            "what": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "obj",
+            },
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test call nullsafepropertylookup (5) 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [
+          Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "parameter",
+          },
+        ],
+        "kind": "call",
+        "what": NullSafePropertyLookup {
+          "kind": "nullsafepropertylookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "cal",
+          },
           "what": Variable {
             "curly": false,
             "kind": "variable",
             "name": "obj",
+            "parenthesizedExpression": true,
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test call nullsafepropertylookup (6) 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": NullSafePropertyLookup {
+          "kind": "nullsafepropertylookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "parameter",
+          },
+          "what": Call {
+            "arguments": [
+              Variable {
+                "curly": false,
+                "kind": "variable",
+                "name": "parameter",
+              },
+            ],
+            "kind": "call",
+            "what": NullSafePropertyLookup {
+              "kind": "nullsafepropertylookup",
+              "offset": Identifier {
+                "kind": "identifier",
+                "name": "cal",
+              },
+              "what": Variable {
+                "curly": false,
+                "kind": "variable",
+                "name": "obj",
+                "parenthesizedExpression": true,
+              },
+            },
           },
         },
       },

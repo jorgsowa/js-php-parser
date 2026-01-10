@@ -97,9 +97,6 @@ module.exports = {
     if (this.token === this.tok.T_SPACESHIP) {
       return result("bin", "<=>", expr, this.next().read_expr());
     }
-    if (this.token === this.tok.T_NULLSAFE_OBJECT_OPERATOR) {
-      return result("nullsafepropertylookup", expr, this.read_what());
-    }
 
     if (this.token === this.tok.T_INSTANCEOF) {
       expr = result(
@@ -115,6 +112,11 @@ module.exports = {
       ) {
         expr = this.read_expr(expr);
       }
+    }
+
+    if (this.token === this.tok.T_NULLSAFE_OBJECT_OPERATOR) {
+      expr = result("nullsafepropertylookup", expr, this.read_what());
+      expr = this.recursive_variable_chain_scan(expr, false, false);
     }
 
     // extra operations :
