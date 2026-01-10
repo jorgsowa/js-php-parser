@@ -198,7 +198,7 @@ AST.prototype.swapLocations = function (target, first, last, parser) {
  * @memberOf module:php-parser
  */
 AST.prototype.resolveLocations = function (target, first, last, parser) {
-  if (this.withPositions) {
+  if (this.withPositions && first && last && first.loc && last.loc) {
     if (target.loc.start.offset > first.loc.start.offset) {
       target.loc.start = first.loc.start;
     }

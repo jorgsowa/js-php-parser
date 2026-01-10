@@ -184,7 +184,8 @@ describe("Test variables", function () {
       parser.parseEval(
         `$classVariable->classProp::class;
         $arrayVariable[0]::class;
-        new class {}::class`,
+        new class {}::class;
+        $this->classProp::class;`,
       ),
     ).toMatchSnapshot();
   });
