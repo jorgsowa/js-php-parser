@@ -1277,6 +1277,39 @@ Program {
 }
 `;
 
+exports[`Test call nullsafepropertylookup (7) 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Bin {
+        "kind": "bin",
+        "left": NullSafePropertyLookup {
+          "kind": "nullsafepropertylookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "cal",
+          },
+          "what": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "obj",
+            "parenthesizedExpression": true,
+          },
+        },
+        "right": NullKeyword {
+          "kind": "nullkeyword",
+          "raw": "null",
+        },
+        "type": "!==",
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
 exports[`Test call offsetlookup 1`] = `
 Program {
   "children": [
